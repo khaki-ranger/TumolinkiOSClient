@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6C222365B3007BB9CD /* SpaceData.swift */; };
+		D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */; };
 		D1923D28221E440A00D214C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D27221E440A00D214C6 /* AppDelegate.swift */; };
 		D1923D2A221E440A00D214C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D29221E440A00D214C6 /* ViewController.swift */; };
 		D1923D2D221E440A00D214C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1923D2B221E440A00D214C6 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		D1653B6C222365B3007BB9CD /* SpaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceData.swift; sourceTree = "<group>"; };
+		D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewCell.swift; sourceTree = "<group>"; };
 		D1923D24221E440A00D214C6 /* TumolinkiOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumolinkiOSClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1923D27221E440A00D214C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1923D29221E440A00D214C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				D1923D29221E440A00D214C6 /* ViewController.swift */,
 				D1923D2B221E440A00D214C6 /* Main.storyboard */,
 				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
+				D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */,
 				D1923D2E221E440C00D214C6 /* Assets.xcassets */,
 				D1923D30221E440C00D214C6 /* LaunchScreen.storyboard */,
 				D1923D33221E440C00D214C6 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				D1923D2A221E440A00D214C6 /* ViewController.swift in Sources */,
 				D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */,
+				D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */,
 				D1923D28221E440A00D214C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

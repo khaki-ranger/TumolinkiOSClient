@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spaceCell" id="P0c-2J-zyC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="spaceCell" id="P0c-2J-zyC" customClass="SpaceTableViewCell" customModule="TumolinkiOSClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P0c-2J-zyC" id="1QR-sO-D3P">
@@ -62,6 +62,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="spaceImageView" destination="6MQ-8y-lDV" id="bSF-3X-Iqc"/>
+                                    <outlet property="spaceNameLabel" destination="0nP-nm-FW5" id="wbv-Gj-8dQ"/>
                                     <segue destination="1JG-ub-cgn" kind="show" id="Dg0-pM-22s"/>
                                 </connections>
                             </tableViewCell>
