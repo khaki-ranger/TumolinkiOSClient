@@ -17,6 +17,7 @@
 		D1923D32221E440C00D214C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1923D30221E440C00D214C6 /* LaunchScreen.storyboard */; };
 		D1923D3D221E440D00D214C6 /* TumolinkiOSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D3C221E440D00D214C6 /* TumolinkiOSClientTests.swift */; };
 		D1923D48221E440D00D214C6 /* TumolinkiOSClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */; };
+		D1C19BDE2227EAC800F7F318 /* AvailabilityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D1923D43221E440D00D214C6 /* TumolinkiOSClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TumolinkiOSClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumolinkiOSClientUITests.swift; sourceTree = "<group>"; };
 		D1923D49221E440D00D214C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +108,9 @@
 				D1923D27221E440A00D214C6 /* AppDelegate.swift */,
 				D14302E12227AC5E002346DB /* SpaceViewController.swift */,
 				D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */,
-				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
 				D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */,
+				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
+				D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */,
 				D1923D2B221E440A00D214C6 /* Main.storyboard */,
 				D1923D2E221E440C00D214C6 /* Assets.xcassets */,
 				D1923D30221E440C00D214C6 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1C19BDE2227EAC800F7F318 /* AvailabilityData.swift in Sources */,
 				D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */,
 				D1653B71222369C7007BB9CD /* SpaceTableViewController.swift in Sources */,
 				D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */,
