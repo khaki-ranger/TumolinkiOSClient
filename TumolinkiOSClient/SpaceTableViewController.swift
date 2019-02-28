@@ -29,7 +29,7 @@ class SpaceTableViewController: UITableViewController {
         let requestUrl = entryUrl
         
         // APIをリクエストする
-        // request(requestUrl: requestUrl)
+        request(requestUrl: requestUrl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,27 +109,35 @@ class SpaceTableViewController: UITableViewController {
             // JSONで返却されたデータをパースして格納する
             guard let data = data else {
                 // データなし
+                print("データなし")
                 return
             }
             
             // JSON形式への変換処理
-            guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [String: Any] else {
+            guard let jsonData = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) as? [Any] else {
                 // 変換失敗
+                print("変換失敗")
                 return
             }
             
+            print(jsonData)
+            
             // データを解析
+            /*
             guard let resultSet = jsonData["ResultSet"] as? [String: Any] else {
                 // データなし
                 return
             }
+            */
             
-            self.parseData(resultSet: resultSet)
+            // self.parseData(resultSet: resultSet)
             
             // テーブルの描画処理
+            /*
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+            */
         }
         
         // 通信開始
