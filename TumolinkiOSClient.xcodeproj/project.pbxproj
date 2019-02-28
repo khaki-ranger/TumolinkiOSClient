@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14302E12227AC5E002346DB /* SpaceViewController.swift */; };
 		D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6C222365B3007BB9CD /* SpaceData.swift */; };
 		D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */; };
 		D1653B71222369C7007BB9CD /* SpaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */; };
 		D1923D28221E440A00D214C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D27221E440A00D214C6 /* AppDelegate.swift */; };
-		D1923D2A221E440A00D214C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D29221E440A00D214C6 /* ViewController.swift */; };
 		D1923D2D221E440A00D214C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1923D2B221E440A00D214C6 /* Main.storyboard */; };
 		D1923D2F221E440C00D214C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1923D2E221E440C00D214C6 /* Assets.xcassets */; };
 		D1923D32221E440C00D214C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1923D30221E440C00D214C6 /* LaunchScreen.storyboard */; };
@@ -37,12 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D14302E12227AC5E002346DB /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		D1653B6C222365B3007BB9CD /* SpaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceData.swift; sourceTree = "<group>"; };
 		D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewCell.swift; sourceTree = "<group>"; };
 		D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewController.swift; sourceTree = "<group>"; };
 		D1923D24221E440A00D214C6 /* TumolinkiOSClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumolinkiOSClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1923D27221E440A00D214C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1923D29221E440A00D214C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1923D2C221E440A00D214C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1923D2E221E440C00D214C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1923D31221E440C00D214C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,11 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				D1923D27221E440A00D214C6 /* AppDelegate.swift */,
-				D1923D29221E440A00D214C6 /* ViewController.swift */,
-				D1923D2B221E440A00D214C6 /* Main.storyboard */,
+				D14302E12227AC5E002346DB /* SpaceViewController.swift */,
 				D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */,
 				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
 				D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */,
+				D1923D2B221E440A00D214C6 /* Main.storyboard */,
 				D1923D2E221E440C00D214C6 /* Assets.xcassets */,
 				D1923D30221E440C00D214C6 /* LaunchScreen.storyboard */,
 				D1923D33221E440C00D214C6 /* Info.plist */,
@@ -265,7 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1923D2A221E440A00D214C6 /* ViewController.swift in Sources */,
+				D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */,
 				D1653B71222369C7007BB9CD /* SpaceTableViewController.swift in Sources */,
 				D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */,
 				D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */,

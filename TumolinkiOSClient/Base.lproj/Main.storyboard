@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="1063.2" y="113.79310344827587"/>
         </scene>
-        <!--View Controller-->
+        <!--Space View Controller-->
         <scene sceneID="TfN-SY-7Xl">
             <objects>
-                <viewController id="1JG-ub-cgn" sceneMemberID="viewController">
+                <viewController id="1JG-ub-cgn" customClass="SpaceViewController" customModule="TumolinkiOSClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fcP-hC-Ber">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +101,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="59F-Ud-ghX"/>
                     </view>
+                    <connections>
+                        <outlet property="spaceNameLabel" destination="XXa-ye-6qt" id="E05-ks-Ccl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ID9-rb-4SS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

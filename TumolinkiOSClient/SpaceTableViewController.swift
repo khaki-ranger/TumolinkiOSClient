@@ -205,6 +205,16 @@ class SpaceTableViewController: UITableViewController {
         
         return cell
     }
+    
+    // セルをタップして次の画面に遷移する前の処理
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cell = sender as? SpaceTableViewCell {
+            if let spaceViewController = segue.destination as? SpaceViewController {
+                // スペース名を設定する
+                spaceViewController.spaceName = cell.spaceNameLabel.text
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
