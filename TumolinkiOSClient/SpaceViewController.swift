@@ -10,19 +10,19 @@ import UIKit
 
 class SpaceViewController: UIViewController {
     
-    // スペース名
-    var spaceName: String?
+    // スペースの情報
+    var space: SpaceData?
 
     @IBOutlet weak var spaceNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        guard let spaseName = spaceName else {
-            return
+        // Set up views if editing an existing Meal.
+        if let space = space {
+            navigationItem.title = space.spaceName
+            spaceNameLabel.text = space.spaceName
         }
-        
-        spaceNameLabel.text = spaseName
     }
 
     override func didReceiveMemoryWarning() {

@@ -206,12 +206,20 @@ class SpaceTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Navigation
     // セルをタップして次の画面に遷移する前の処理
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? SpaceTableViewCell {
             if let spaceViewController = segue.destination as? SpaceViewController {
-                // スペース名を設定する
-                spaceViewController.spaceName = cell.spaceNameLabel.text
+                
+                guard let indexPath = tableView.indexPath(for: cell) else {
+                    fatalError("The selected cell is not begin displayed by the table")
+                }
+                
+                let selectedSpace = spaceDataArray[indexPath.row]
+                
+                // スペースの情報を登録
+                spaceViewController.space = selectedSpace
             }
         }
     }
@@ -248,16 +256,6 @@ class SpaceTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
     */
 
