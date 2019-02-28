@@ -37,25 +37,13 @@ class SpaceTableViewController: UITableViewController {
     }
     
     // レスポンス内容をパースしてリストを作成する
-    func parseData(resultSet: [String: Any]) {
+    func parseData(jsonData: [Any]) {
         
-        guard let firstObject = resultSet["0"] as? [String: Any] else {
-            return
-        }
-        
-        guard let results = firstObject["Reslt"] as? [String: Any] else {
-            return
-        }
-        
-        for key in results.keys.sorted() {
-            // Requestのキーは無視する
-            if key == "Request" {
-                // 次のfor文の処理を行う
-                continue
-            }
-            
+        for resultSet in jsonData {
             // スペース取得
-            guard let result = results[key] as? [String: Any] else {
+            // String:Any型が入った辞書型で取得できるかどうか検証
+            guard let result = resultSet as? [String: Any] else {
+                // 取得に失敗
                 // 次のfor文の処理を行う
                 continue
             }
@@ -63,15 +51,15 @@ class SpaceTableViewController: UITableViewController {
             // スペースのデータ格納オブジェクトを作成
             let spaceData = SpaceData()
             
-            // レスポンスデータから画像の情報を取得する
-            if let spaceImageDic = result["Image"] as? [String: Any] {
-                let spaceImageUrl = spaceImageDic["Medium"] as? String
-                spaceData.spaceImageUrl = spaceImageUrl
+            // spaceNameをString型で取得
+            if let spaceName = result["spaceName"] as? String {
+                spaceData.spaceName = spaceName
             }
             
-            // レスポンスデータからスペース名の情報を取得する
-            let spaceName = result["Name"] as? String
-            spaceData.spaceName = spaceName
+            // imgPathをString型で取得
+            if let spaceImageUrl = result["imgPath"] as? String {
+                spaceData.spaceImageUrl = spaceImageUrl
+            }
             
             // スペースのリストに追加
             self.spaceDataArray.append(spaceData)
@@ -120,24 +108,13 @@ class SpaceTableViewController: UITableViewController {
                 return
             }
             
-            print(jsonData)
-            
             // データを解析
-            /*
-            guard let resultSet = jsonData["ResultSet"] as? [String: Any] else {
-                // データなし
-                return
-            }
-            */
-            
-            // self.parseData(resultSet: resultSet)
+            self.parseData(jsonData: jsonData)
             
             // テーブルの描画処理
-            /*
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            */
         }
         
         // 通信開始
@@ -169,6 +146,7 @@ class SpaceTableViewController: UITableViewController {
         // スペース名の設定
         cell.spaceNameLabel.text = spaceData.spaceName
         
+        /*
         // 画像の設定処理
         // すでにセルに設定されている画像と同じかどうかチェックする
         // 画像がまだ設定されていない場合に処理を行う
@@ -220,6 +198,7 @@ class SpaceTableViewController: UITableViewController {
         
         // 画像の読み込み処理開始
         task.resume()
+        */
         
         return cell
     }
