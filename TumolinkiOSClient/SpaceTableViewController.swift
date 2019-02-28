@@ -17,10 +17,10 @@ class SpaceTableViewController: UITableViewController {
     var imageCash = NSCache<AnyObject, UIImage>()
     
     // リクエストのベースURL
-    var baseUrl: String = "https://www.tumolink.com/"
+    var baseUrl: String = "https://www.tumolink.com"
     
     // APIのパス
-    var apiPath: String = "api/iosclient"
+    var apiPath: String = "/api/iosclient"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +60,9 @@ class SpaceTableViewController: UITableViewController {
             }
             
             // imgPathをString型で取得
-            if let spaceImageUrl = result["imgPath"] as? String {
+            if let imgPath = result["imgPath"] as? String {
+                // 画像のフルパスを作成
+                let spaceImageUrl = baseUrl + imgPath
                 spaceData.spaceImageUrl = spaceImageUrl
             }
             
@@ -149,7 +151,6 @@ class SpaceTableViewController: UITableViewController {
         // スペース名の設定
         cell.spaceNameLabel.text = spaceData.spaceName
         
-        /*
         // 画像の設定処理
         // すでにセルに設定されている画像と同じかどうかチェックする
         // 画像がまだ設定されていない場合に処理を行う
@@ -201,7 +202,6 @@ class SpaceTableViewController: UITableViewController {
         
         // 画像の読み込み処理開始
         task.resume()
-        */
         
         return cell
     }
