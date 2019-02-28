@@ -10,14 +10,17 @@ import UIKit
 
 class SpaceTableViewController: UITableViewController {
     
-    // スペースの情報の一つ一つのデータを管理するための配列
+    // スペース一つ一つに関するデータを管理するための配列
     var spaceDataArray = [SpaceData]()
     
     // 再利用する画像データを管理する
     var imageCash = NSCache<AnyObject, UIImage>()
     
-    // APIのリクエストURL
-    var entryUrl: String = "https://www.tumolink.com/api/iosclient"
+    // リクエストのベースURL
+    var baseUrl: String = "https://www.tumolink.com/"
+    
+    // APIのパス
+    var apiPath: String = "api/iosclient"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +29,7 @@ class SpaceTableViewController: UITableViewController {
         spaceDataArray.removeAll()
         
         // リクエストURLを作成する
-        let requestUrl = entryUrl
+        let requestUrl = baseUrl + apiPath
         
         // APIをリクエストする
         request(requestUrl: requestUrl)
