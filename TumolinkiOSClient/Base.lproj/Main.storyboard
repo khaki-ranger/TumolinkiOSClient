@@ -48,6 +48,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zV-Ge-wiM">
+                                            <rect key="frame" x="354" y="88" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="420-l7-DMs" secondAttribute="bottom" constant="10" id="152-Gu-aZg"/>
@@ -57,11 +63,14 @@
                                         <constraint firstItem="0nP-nm-FW5" firstAttribute="leading" secondItem="420-l7-DMs" secondAttribute="leading" id="NN6-ZA-Z6a"/>
                                         <constraint firstItem="420-l7-DMs" firstAttribute="leading" secondItem="6MQ-8y-lDV" secondAttribute="trailing" constant="8" id="NkV-KI-C0R"/>
                                         <constraint firstItem="6MQ-8y-lDV" firstAttribute="leading" secondItem="1QR-sO-D3P" secondAttribute="leading" constant="10" id="UBs-9o-2Hn"/>
+                                        <constraint firstAttribute="bottom" secondItem="3zV-Ge-wiM" secondAttribute="bottom" constant="10" id="avN-ZF-xW6"/>
                                         <constraint firstItem="6MQ-8y-lDV" firstAttribute="top" secondItem="1QR-sO-D3P" secondAttribute="top" constant="10" id="bBg-fy-w9N"/>
+                                        <constraint firstAttribute="trailing" secondItem="3zV-Ge-wiM" secondAttribute="trailing" constant="10" id="glj-28-jzj"/>
                                         <constraint firstItem="0nP-nm-FW5" firstAttribute="top" secondItem="6MQ-8y-lDV" secondAttribute="top" id="hLw-27-s0O"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="availabilitiesNumberLabel" destination="3zV-Ge-wiM" id="NTJ-p1-gzo"/>
                                     <outlet property="spaceImageView" destination="6MQ-8y-lDV" id="bSF-3X-Iqc"/>
                                     <outlet property="spaceNameLabel" destination="0nP-nm-FW5" id="wbv-Gj-8dQ"/>
                                     <segue destination="1JG-ub-cgn" kind="show" id="Dg0-pM-22s"/>

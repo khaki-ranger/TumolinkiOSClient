@@ -66,6 +66,45 @@ class SpaceTableViewController: UITableViewController {
                 spaceData.spaceImageUrl = spaceImageUrl
             }
             
+            // ツモリストの情報を取得
+            if let availabilities = result["availabilities"] as? [Any] {
+                
+                // ツモリスト一つ一つに関するデータを管理するための配列
+                var availabilityDataArray = [AvailabilityData]()
+                
+                for availabilitySet in availabilities {
+                    guard let availability = availabilitySet as? [String: Any] else {
+                        // ツモリストは存在しない
+                        // 次のfor文の処理を行う
+                        continue
+                    }
+                
+                    // ツモリストのデータ格納オブジェクトを作成
+                    let availabilityData = AvailabilityData()
+                    
+                    // ユーザー名をString型で取得
+                    if let username = availability["uername"] as? String {
+                        availabilityData.username = username
+                    }
+                    
+                    // ユーザーアイコン画像をString型で取得
+                    if let userPhotoUrl = availability["photoUrl"] as? String {
+                        availabilityData.userPhotoUrl = userPhotoUrl
+                    }
+                    
+                    // 入退室予定時刻をString型で取得
+                    if let arrivingAt = availability["arrivingAt"] as? String {
+                        availabilityData.arrivingAt = arrivingAt
+                    }
+                    
+                    // ツモリストのリストに追加
+                    availabilityDataArray.append(availabilityData)
+                }
+                
+                // AvailabilityData型が入った配列を格納
+                spaceData.availabilities = availabilityDataArray
+            }
+            
             // スペースのリストに追加
             self.spaceDataArray.append(spaceData)
         }
@@ -220,6 +259,7 @@ class SpaceTableViewController: UITableViewController {
                 
                 // スペースの情報を登録
                 spaceViewController.space = selectedSpace
+                
                 // スペースの画像を登録
                 spaceViewController.spaceImage = cell.spaceImageView.image
             }

@@ -8,16 +8,13 @@
 
 import Foundation
 
-class Availability {
+class AvailabilityData {
     // ユーザー名
     var username: String?
     
     // ユーザーアイコン画像のURL
     var userPhotoUrl: String?
     
-    // 入室予定時刻
+    // 入退室予定時刻
     var arrivingAt: String?
-    
-    // 退出予定時刻
-    var leavingAt: String?
 }

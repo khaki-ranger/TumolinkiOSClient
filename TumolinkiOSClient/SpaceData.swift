@@ -11,7 +11,10 @@ import Foundation
 class SpaceData {
     // スペース画像のURL
     var spaceImageUrl: String?
+    
     // スペース名
     var spaceName: String?
-    // 今日のツモリスト
+    
+    // ツモリスト
+    var availabilities: [AvailabilityData]?
 }
