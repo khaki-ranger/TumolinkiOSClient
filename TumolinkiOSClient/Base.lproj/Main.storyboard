@@ -87,22 +87,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細画面" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXa-ye-6qt">
-                                <rect key="frame" x="153" y="323" width="69.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrw-64-Cgx">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="XXa-ye-6qt" firstAttribute="centerY" secondItem="fcP-hC-Ber" secondAttribute="centerY" id="45e-CJ-WaM"/>
-                            <constraint firstItem="XXa-ye-6qt" firstAttribute="centerX" secondItem="fcP-hC-Ber" secondAttribute="centerX" id="e32-Ul-mRm"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="59F-Ud-ghX"/>
                     </view>
                     <connections>
-                        <outlet property="spaceNameLabel" destination="XXa-ye-6qt" id="E05-ks-Ccl"/>
+                        <outlet property="spaceImageView" destination="Hrw-64-Cgx" id="22t-9v-hQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ID9-rb-4SS" userLabel="First Responder" sceneMemberID="firstResponder"/>

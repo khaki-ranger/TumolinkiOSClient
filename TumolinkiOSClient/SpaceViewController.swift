@@ -12,8 +12,10 @@ class SpaceViewController: UIViewController {
     
     // スペースの情報
     var space: SpaceData?
-
-    @IBOutlet weak var spaceNameLabel: UILabel!
+    var spaceImage: UIImage?
+    
+    // MARK: Properties
+    @IBOutlet weak var spaceImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,7 @@ class SpaceViewController: UIViewController {
         // Set up views if editing an existing Meal.
         if let space = space {
             navigationItem.title = space.spaceName
-            spaceNameLabel.text = space.spaceName
+            spaceImageView.image = spaceImage
         }
     }
 

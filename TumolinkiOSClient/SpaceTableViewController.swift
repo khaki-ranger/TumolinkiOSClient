@@ -220,6 +220,8 @@ class SpaceTableViewController: UITableViewController {
                 
                 // スペースの情報を登録
                 spaceViewController.space = selectedSpace
+                // スペースの画像を登録
+                spaceViewController.spaceImage = cell.spaceImageView.image
             }
         }
     }
