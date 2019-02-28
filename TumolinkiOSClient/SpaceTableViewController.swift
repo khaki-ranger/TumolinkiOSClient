@@ -55,7 +55,7 @@ class SpaceTableViewController: UITableViewController {
             let spaceData = SpaceData()
             
             // spaceNameをString型で取得
-            if let spaceName = result["spaceName"] as? String {
+            if let spaceName = result["name"] as? String {
                 spaceData.spaceName = spaceName
             }
             
