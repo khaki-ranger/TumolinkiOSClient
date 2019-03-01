@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14302E12227AC5E002346DB /* SpaceViewController.swift */; };
+		D1634707222966820021B4FE /* AvailabilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1634706222966820021B4FE /* AvailabilityTableViewCell.swift */; };
 		D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6C222365B3007BB9CD /* SpaceData.swift */; };
 		D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */; };
 		D1653B71222369C7007BB9CD /* SpaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		D14302E12227AC5E002346DB /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
+		D1634706222966820021B4FE /* AvailabilityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityTableViewCell.swift; sourceTree = "<group>"; };
 		D1653B6C222365B3007BB9CD /* SpaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceData.swift; sourceTree = "<group>"; };
 		D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewCell.swift; sourceTree = "<group>"; };
 		D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTableViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */,
 				D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */,
 				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
+				D1634706222966820021B4FE /* AvailabilityTableViewCell.swift */,
 				D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */,
 				D1923D2B221E440A00D214C6 /* Main.storyboard */,
 				D1923D2E221E440C00D214C6 /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1C19BDE2227EAC800F7F318 /* AvailabilityData.swift in Sources */,
+				D1634707222966820021B4FE /* AvailabilityTableViewCell.swift in Sources */,
 				D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */,
 				D1653B71222369C7007BB9CD /* SpaceTableViewController.swift in Sources */,
 				D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */,

@@ -102,11 +102,41 @@
                                     <constraint firstAttribute="height" constant="200" id="ocS-On-uSc"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2cl-fr-K0W">
+                                <rect key="frame" x="0.0" y="264" width="375" height="403"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="availabilityCell" id="g2N-DC-pFQ" customClass="AvailabilityTableViewCell" customModule="TumolinkiOSClient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g2N-DC-pFQ" id="1Qu-QN-y6P">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ツモリストの名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KG-ds-LIX">
+                                                    <rect key="frame" x="15" y="0.0" width="139" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="usernameLabel" destination="3KG-ds-LIX" id="CU1-YM-7CB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Hrw-64-Cgx" firstAttribute="leading" secondItem="59F-Ud-ghX" secondAttribute="leading" id="3EG-d1-3Lj"/>
                             <constraint firstItem="Hrw-64-Cgx" firstAttribute="top" secondItem="59F-Ud-ghX" secondAttribute="top" id="6lB-3g-zuB"/>
+                            <constraint firstItem="2cl-fr-K0W" firstAttribute="top" secondItem="Hrw-64-Cgx" secondAttribute="bottom" id="877-nt-94h"/>
+                            <constraint firstItem="2cl-fr-K0W" firstAttribute="leading" secondItem="59F-Ud-ghX" secondAttribute="leading" id="JAH-Tl-aku"/>
+                            <constraint firstItem="59F-Ud-ghX" firstAttribute="bottom" secondItem="2cl-fr-K0W" secondAttribute="bottom" id="VHe-Qu-s4h"/>
+                            <constraint firstItem="59F-Ud-ghX" firstAttribute="trailing" secondItem="2cl-fr-K0W" secondAttribute="trailing" id="d9o-BH-RlB"/>
                             <constraint firstItem="59F-Ud-ghX" firstAttribute="trailing" secondItem="Hrw-64-Cgx" secondAttribute="trailing" id="ggv-fe-Eir"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="59F-Ud-ghX"/>

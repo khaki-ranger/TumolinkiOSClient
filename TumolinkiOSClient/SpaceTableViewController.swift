@@ -74,7 +74,6 @@ class SpaceTableViewController: UITableViewController {
                 
                 for availabilitySet in availabilities {
                     guard let availability = availabilitySet as? [String: Any] else {
-                        // ツモリストは存在しない
                         // 次のfor文の処理を行う
                         continue
                     }
