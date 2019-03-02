@@ -83,7 +83,7 @@ class SpaceTableViewController: UITableViewController {
                     let availabilityData = AvailabilityData()
                     
                     // ユーザー名をString型で取得
-                    if let username = availability["uername"] as? String {
+                    if let username = availability["username"] as? String {
                         availabilityData.username = username
                     }
                     

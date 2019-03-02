@@ -13,6 +13,9 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
     // スペースの情報
     var space: SpaceData?
     var spaceImage: UIImage?
+    // AvailabilityData型の値が入った配列
+    // ツモリストを表現
+    var availabilityArray: [AvailabilityData]?
     
     // MARK: Properties
     @IBOutlet weak var spaceImageView: UIImageView!
@@ -27,6 +30,9 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
         if let space = space {
             navigationItem.title = space.spaceName
             spaceImageView.image = spaceImage
+            if let availabilities = space.availabilities {
+                availabilityArray = availabilities
+            }
         }
     }
 
@@ -38,7 +44,7 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
     // テーブルの行数を返却する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // ツモリストの配列の長さを返却する
-        guard let availabilitiesCount = space?.availabilities?.count else {
+        guard let availabilitiesCount = availabilityArray?.count else {
             return 0
         }
         
@@ -48,7 +54,14 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
     // テーブルの行ごとのセルを返却する
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Storyboardで指定したavailabilityCell識別子を利用して再利用可能なセルを返却する
-        let cell = tableView.dequeueReusableCell(withIdentifier: "availabilityCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "availabilityCell", for: indexPath) as? AvailabilityTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        // 行番号に合ったツモリストのユーザー名を取得
+        if let username = availabilityArray?[indexPath.row].username {
+            cell.usernameLabel.text = username
+        }
         
         return cell
     }
