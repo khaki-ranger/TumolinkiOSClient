@@ -38,7 +38,9 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
     // テーブルの行数を返却する
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // ツモリストの配列の長さを返却する
-        return (self.space?.availabilities?.count)!
+        // return (self.space?.availabilities?.count)!
+        
+        return 3
     }
     
     // テーブルの行ごとのセルを返却する
