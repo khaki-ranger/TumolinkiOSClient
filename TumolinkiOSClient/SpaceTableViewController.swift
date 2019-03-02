@@ -70,6 +70,7 @@ class SpaceTableViewController: UITableViewController {
             if let availabilities = result["availabilities"] as? [Any] {
                 
                 // ツモリスト一つ一つに関するデータを管理するための配列
+                // ツモリストがゼロでも空の配列を作る
                 var availabilityDataArray = [AvailabilityData]()
                 
                 for availabilitySet in availabilities {
@@ -101,6 +102,7 @@ class SpaceTableViewController: UITableViewController {
                 }
                 
                 // AvailabilityData型が入った配列を格納
+                // ツモリストがゼロでも空の配列をspaceDataに格納
                 spaceData.availabilities = availabilityDataArray
             }
             
@@ -188,6 +190,10 @@ class SpaceTableViewController: UITableViewController {
         
         // スペース名の設定
         cell.spaceNameLabel.text = spaceData.spaceName
+        
+        // ツモリストの数を設定
+        let availabilitiesCount = spaceData.availabilities?.count ?? 0
+        cell.availabilitiesCountLabel.text = String(availabilitiesCount)
         
         // 画像の設定処理
         // すでにセルに設定されている画像と同じかどうかチェックする

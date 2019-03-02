@@ -15,7 +15,7 @@ class SpaceTableViewCell: UITableViewCell {
     // スペース名
     @IBOutlet weak var spaceNameLabel: UILabel!
     // 今日のツモリストの人数
-    @IBOutlet weak var availabilitiesNumberLabel: UILabel!
+    @IBOutlet weak var availabilitiesCountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

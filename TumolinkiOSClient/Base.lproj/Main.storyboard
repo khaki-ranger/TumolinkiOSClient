@@ -70,7 +70,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="availabilitiesNumberLabel" destination="3zV-Ge-wiM" id="NTJ-p1-gzo"/>
+                                    <outlet property="availabilitiesCountLabel" destination="3zV-Ge-wiM" id="ms8-3W-cXP"/>
                                     <outlet property="spaceImageView" destination="6MQ-8y-lDV" id="bSF-3X-Iqc"/>
                                     <outlet property="spaceNameLabel" destination="0nP-nm-FW5" id="wbv-Gj-8dQ"/>
                                     <segue destination="1JG-ub-cgn" kind="show" id="Dg0-pM-22s"/>
