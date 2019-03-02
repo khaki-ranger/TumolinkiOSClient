@@ -127,6 +127,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1JG-ub-cgn" id="M2f-Jv-uuw"/>
+                                    <outlet property="delegate" destination="1JG-ub-cgn" id="jle-0X-vat"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -142,6 +146,7 @@
                         <viewLayoutGuide key="safeArea" id="59F-Ud-ghX"/>
                     </view>
                     <connections>
+                        <outlet property="availabilityTableView" destination="2cl-fr-K0W" id="Gct-bX-567"/>
                         <outlet property="spaceImageView" destination="Hrw-64-Cgx" id="22t-9v-hQh"/>
                     </connections>
                 </viewController>

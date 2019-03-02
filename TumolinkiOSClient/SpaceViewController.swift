@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SpaceViewController: UIViewController {
+class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // スペースの情報
     var space: SpaceData?
@@ -16,6 +16,9 @@ class SpaceViewController: UIViewController {
     
     // MARK: Properties
     @IBOutlet weak var spaceImageView: UIImageView!
+    
+    // ツモリストを表示するテーブル
+    @IBOutlet weak var availabilityTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,20 @@ class SpaceViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // テーブルの行数を返却する
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // ツモリストの配列の長さを返却する
+        return (self.space?.availabilities?.count)!
+    }
+    
+    // テーブルの行ごとのセルを返却する
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Storyboardで指定したavailabilityCell識別子を利用して再利用可能なセルを返却する
+        let cell = tableView.dequeueReusableCell(withIdentifier: "availabilityCell", for: indexPath)
+        
+        return cell
     }
     
 
