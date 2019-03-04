@@ -92,9 +92,14 @@ class SpaceTableViewController: UITableViewController {
                         availabilityData.userPhotoUrl = userPhotoUrl
                     }
                     
-                    // 入退室予定時刻をString型で取得
+                    // 入室予定時刻をString型で取得
                     if let arrivingAt = availability["arrivingAt"] as? String {
                         availabilityData.arrivingAt = arrivingAt
+                    }
+                    
+                    // 退室予定時刻をString型で取得
+                    if let leavingAt = availability["leavingAt"] as? String {
+                        availabilityData.leavingAt = leavingAt
                     }
                     
                     // ツモリストのリストに追加

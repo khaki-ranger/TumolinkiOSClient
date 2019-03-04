@@ -15,6 +15,9 @@ class AvailabilityData {
     // ユーザーアイコン画像のURL
     var userPhotoUrl: String?
     
-    // 入退室予定時刻
+    // 入室予定時刻
     var arrivingAt: String?
+    
+    // 退出予定時刻
+    var leavingAt: String?
 }
