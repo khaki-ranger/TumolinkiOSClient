@@ -12,6 +12,8 @@ class AvailabilityTableViewCell: UITableViewCell {
 
     // ツモリストの名前
     @IBOutlet weak var usernameLabel: UILabel!
+    // 予定入退室時刻
+    @IBOutlet weak var arrivingAtLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

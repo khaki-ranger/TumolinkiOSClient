@@ -63,6 +63,11 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.usernameLabel.text = username
         }
         
+        // 行番号に合ったツモリストの予定入退室時刻を取得
+        if let arrivingAt = availabilityArray?[indexPath.row].arrivingAt {
+            cell.arrivingAtLabel.text = arrivingAt
+        }
+        
         return cell
     }
     
