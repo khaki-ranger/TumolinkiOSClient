@@ -86,7 +86,55 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
         // 入退室予定時刻を設定
         cell.arrivingAtLabel.text = arrivingAndLeavingString
         
-        // ユーザーのアイコン画像の設定処理
+        // ユーザーのアイコン画像のURLを取得
+        guard let userImageUrl = availabilityData?.userPhotoUrl else {
+            // 画像なし
+            return cell
+        }
+        
+        // キャッシュの画像があれば取得する
+        if let cacheImage = imageCash.object(forKey: userImageUrl as AnyObject) {
+            // キャッシュ画像の設定
+            cell.userImageView.image = cacheImage
+            return cell
+        }
+        
+        // キャッシュの画像がないためダウンロードする
+        guard let url = URL(string: userImageUrl) else {
+            // urlが生成できなかった
+            return cell
+        }
+        
+        let request = URLRequest(url: url)
+        let session = URLSession.shared
+        let task = session.dataTask(with: request) {
+            (data: Data?, response: URLResponse?, error: Error?) in
+            guard error == nil else {
+                // エラーあり
+                return
+            }
+            
+            guard let data = data else {
+                // データがない
+                return
+            }
+            
+            guard let image = UIImage(data: data) else {
+                // imageが生成できなかった
+                return
+            }
+            
+            // ダウンロードした画像をキャッシュに登録しておく
+            self.imageCash.setObject(image, forKey: userImageUrl as AnyObject)
+            
+            // 画像はメインスレッド上で設定する
+            DispatchQueue.main.async {
+                cell.userImageView.image = image
+            }
+        }
+        
+        // 画像の読み込み処理開始
+        task.resume()
         
         return cell
     }
