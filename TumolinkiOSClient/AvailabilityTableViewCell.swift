@@ -10,6 +10,8 @@ import UIKit
 
 class AvailabilityTableViewCell: UITableViewCell {
 
+    // ツモリストのアイコン画像
+    @IBOutlet weak var userImageView: UIImageView!
     // ツモリストの名前
     @IBOutlet weak var usernameLabel: UILabel!
     // 予定入退室時刻

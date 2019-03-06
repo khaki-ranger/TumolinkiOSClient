@@ -13,9 +13,13 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
     // スペースの情報
     var space: SpaceData?
     var spaceImage: UIImage?
+    
     // AvailabilityData型の値が入った配列
     // ツモリストを表現
     var availabilityArray: [AvailabilityData]?
+    
+    // 再利用する画像データを管理する
+    var imageCash = NSCache<AnyObject, UIImage>()
     
     // MARK: Properties
     @IBOutlet weak var spaceImageView: UIImageView!
@@ -58,25 +62,31 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
             return UITableViewCell()
         }
         
-        // 行番号に合ったツモリストのユーザー名を取得
-        if let username = availabilityArray?[indexPath.row].username {
+        // 行番号に合ったツモリストのデータを定数に格納
+        let availabilityData = availabilityArray?[indexPath.row]
+        
+        // ユーザー名を設定
+        if let username = availabilityData?.username {
             cell.usernameLabel.text = username
         }
         
         // 入退室予定時刻を設定する変数
         var arrivingAndLeavingString = ""
         
-        // 行番号に合ったツモリストの入室予定時刻を取得
-        if let arrivingAt = availabilityArray?[indexPath.row].arrivingAt {
+        // 入室予定時刻を取得
+        if let arrivingAt = availabilityData?.arrivingAt {
             arrivingAndLeavingString = arrivingAt
         }
         
-        // 行番号に合ったツモリストの退室予定時刻を取得
-        if let leavingAt = availabilityArray?[indexPath.row].leavingAt {
+        // 退室予定時刻を取得
+        if let leavingAt = availabilityData?.leavingAt {
             arrivingAndLeavingString += leavingAt
         }
         
+        // 入退室予定時刻を設定
         cell.arrivingAtLabel.text = arrivingAndLeavingString
+        
+        // ユーザーのアイコン画像の設定処理
         
         return cell
     }
