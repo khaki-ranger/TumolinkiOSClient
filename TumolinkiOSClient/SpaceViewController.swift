@@ -66,8 +66,13 @@ class SpaceViewController: UIViewController, UITableViewDataSource, UITableViewD
         let availabilityData = availabilityArray?[indexPath.row]
         
         // ユーザー名を設定
+        // 取得できていればニックネームを設定
         if let username = availabilityData?.username {
-            cell.usernameLabel.text = username
+            if let nickname = availabilityData?.nickname {
+                cell.usernameLabel.text = nickname
+            } else {
+                cell.usernameLabel.text = username
+            }
         }
         
         // 入退室予定時刻を設定する変数

@@ -12,6 +12,9 @@ class AvailabilityData {
     // ユーザー名
     var username: String?
     
+    // ニックネーム
+    var nickname: String?
+    
     // ユーザーアイコン画像のURL
     var userPhotoUrl: String?
     

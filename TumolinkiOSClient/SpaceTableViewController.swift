@@ -87,6 +87,11 @@ class SpaceTableViewController: UITableViewController {
                         availabilityData.username = username
                     }
                     
+                    // ニックネームをString型で取得
+                    if let nickname = availability["nickname"] as? String {
+                        availabilityData.nickname = nickname
+                    }
+                    
                     // ユーザーアイコン画像をString型で取得
                     if let userPhotoUrl = availability["photoUrl"] as? String {
                         availabilityData.userPhotoUrl = userPhotoUrl
