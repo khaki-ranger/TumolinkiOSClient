@@ -24,8 +24,35 @@ class SpaceTableViewController: UITableViewController {
     // APIのパス
     var apiPath: String = "/api/iosclient"
     
-    // ログインユーザーのid
+    // ログインユーザーのidを格納する
     var userid: Int?
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // NavigationBarのタイトルにアイコン画像を設定
+        var titleView : UIImageView
+        titleView = UIImageView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        titleView.contentMode = .scaleAspectFit
+        titleView.image = UIImage(named: "logo")
+        self.navigationItem.titleView = titleView
+        
+        // ログインユーザーの情報を取得
+        returnUserDate()
+        
+        // 保持しているデータをいったん削除
+        spaceDataArray.removeAll()
+        
+        // リクエストURLを作成する
+        let requestUrl = baseUrl + apiPath
+        
+        // APIをリクエストする
+        request(requestUrl: requestUrl)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
     // FacebookLogin
     // ユーザー情報を表示する
@@ -53,26 +80,6 @@ class SpaceTableViewController: UITableViewController {
             }
         })
         connection.start()
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // 保持しているデータをいったん削除
-        spaceDataArray.removeAll()
-        
-        // リクエストURLを作成する
-        let requestUrl = baseUrl + apiPath
-        
-        // APIをリクエストする
-        request(requestUrl: requestUrl)
-        
-        // ログインユーザーの情報を表示する
-        returnUserDate()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     // レスポンス内容をパースしてリストを作成する
