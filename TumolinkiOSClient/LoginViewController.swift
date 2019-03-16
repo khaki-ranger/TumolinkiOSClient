@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // 画面遷移
     func segueToSpaceTableViewController() {
@@ -22,8 +24,42 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("Debug : 画面遷移します")
-        segueToSpaceTableViewController()
+        // ログイン済みかどうかチェックする
+        if let _ = FBSDKAccessToken.current() {
+            // 画面遷移
+            print("ログインしてます")
+            segueToSpaceTableViewController()
+        } else {
+            // FBログインボタンを設置
+            let fbLoginBtn = FBSDKLoginButton()
+            fbLoginBtn.readPermissions = ["public_profile", "email"]
+            fbLoginBtn.center = self.view.center
+            fbLoginBtn.delegate = self
+            self.view.addSubview(fbLoginBtn)
+        }
+    }
+    
+    // ログインのコールバック
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        // エラーチェック
+        if error == nil {
+            // キャンセルしたかどうか
+            if result.isCancelled {
+                print("キャンセル")
+            } else {
+                // 画面遷移
+                // performSegue(withIdentifier: "modalTop", sender: self)
+                print("ログインしました")
+                segueToSpaceTableViewController()
+            }
+        } else {
+            print("エラー")
+        }
+    }
+    
+    // ログアウトのコールバック
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("ログアウトしました")
     }
 
     override func didReceiveMemoryWarning() {
