@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SpaceTableViewController: UITableViewController {
     
@@ -21,6 +23,29 @@ class SpaceTableViewController: UITableViewController {
     
     // APIのパス
     var apiPath: String = "/api/iosclient"
+    
+    // FacebookLogin
+    // ユーザー情報を表示する
+    func returnUserDate() {
+        let graphPath = "me"
+        let parameters = ["fields": "id, name, email"]
+        let graphRequest = FBSDKGraphRequest(graphPath: graphPath, parameters: parameters)
+        
+        let connection = FBSDKGraphRequestConnection()
+        connection.add(graphRequest, completionHandler: { (connection, result, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                guard let result = result as? [String: Any] else {
+                    return
+                }
+                
+                // ログインユーザーの情報をデバッグ表示
+                print(result)
+            }
+        })
+        connection.start()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +58,9 @@ class SpaceTableViewController: UITableViewController {
         
         // APIをリクエストする
         request(requestUrl: requestUrl)
+        
+        // ログインユーザーの情報を表示する
+        returnUserDate()
     }
 
     override func didReceiveMemoryWarning() {

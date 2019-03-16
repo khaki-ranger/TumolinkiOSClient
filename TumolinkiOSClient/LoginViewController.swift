@@ -26,8 +26,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     override func viewDidAppear(_ animated: Bool) {
         // ログイン済みかどうかチェックする
         if let _ = FBSDKAccessToken.current() {
-            // 画面遷移
-            print("ログインしてます")
+            // ログインしているので画面遷移する
+            print("Debug : ログインしてます")
             segueToSpaceTableViewController()
         } else {
             // FBログインボタンを設置
@@ -45,21 +45,20 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         if error == nil {
             // キャンセルしたかどうか
             if result.isCancelled {
-                print("キャンセル")
+                print("Debug : キャンセル")
             } else {
-                // 画面遷移
-                // performSegue(withIdentifier: "modalTop", sender: self)
-                print("ログインしました")
+                // ログインできたので画面遷移する
+                print("Debug : ログインしました")
                 segueToSpaceTableViewController()
             }
         } else {
-            print("エラー")
+            print("Debug : エラー")
         }
     }
     
     // ログアウトのコールバック
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("ログアウトしました")
+        print("Debug : ログアウトしました")
     }
 
     override func didReceiveMemoryWarning() {
