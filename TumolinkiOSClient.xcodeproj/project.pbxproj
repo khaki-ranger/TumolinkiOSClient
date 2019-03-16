@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EDFB7913E9E3293D6A84D29 /* Pods_TumolinkiOSClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D0D1F9D56A9951031471F7 /* Pods_TumolinkiOSClientTests.framework */; };
+		82C9C0F95487622AA5F75694 /* Pods_TumolinkiOSClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C6326C8FA39CE73114C2A1 /* Pods_TumolinkiOSClient.framework */; };
 		D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14302E12227AC5E002346DB /* SpaceViewController.swift */; };
 		D1634707222966820021B4FE /* AvailabilityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1634706222966820021B4FE /* AvailabilityTableViewCell.swift */; };
 		D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1653B6C222365B3007BB9CD /* SpaceData.swift */; };
@@ -20,6 +22,7 @@
 		D1923D48221E440D00D214C6 /* TumolinkiOSClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */; };
 		D1C19BDE2227EAC800F7F318 /* AvailabilityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */; };
 		D1D07DF3223CB352003264CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D07DF2223CB352003264CA /* LoginViewController.swift */; };
+		D3B29B0A575DBFB9F8A54702 /* Pods_TumolinkiOSClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C88A696AFFA0E5A378D0F /* Pods_TumolinkiOSClientUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2E4F08E45D45D90F9383B1 /* Pods-TumolinkiOSClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClientUITests.debug.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClientUITests/Pods-TumolinkiOSClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		19C6326C8FA39CE73114C2A1 /* Pods_TumolinkiOSClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumolinkiOSClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		322F196F24F4D0F8BDC3CB96 /* Pods-TumolinkiOSClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClient.debug.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClient/Pods-TumolinkiOSClient.debug.xcconfig"; sourceTree = "<group>"; };
+		42C7AFBFA221FF8D49DD3850 /* Pods-TumolinkiOSClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClientTests.release.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClientTests/Pods-TumolinkiOSClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		7B1F545AA98CE62BB19DF368 /* Pods-TumolinkiOSClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClientUITests.release.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClientUITests/Pods-TumolinkiOSClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85D0D1F9D56A9951031471F7 /* Pods_TumolinkiOSClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumolinkiOSClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05C88A696AFFA0E5A378D0F /* Pods_TumolinkiOSClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TumolinkiOSClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14302E12227AC5E002346DB /* SpaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewController.swift; sourceTree = "<group>"; };
 		D1634706222966820021B4FE /* AvailabilityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityTableViewCell.swift; sourceTree = "<group>"; };
 		D1653B6C222365B3007BB9CD /* SpaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceData.swift; sourceTree = "<group>"; };
@@ -59,6 +69,8 @@
 		D1923D49221E440D00D214C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityData.swift; sourceTree = "<group>"; };
 		D1D07DF2223CB352003264CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DCF37BA3E5E70FC65167AE2F /* Pods-TumolinkiOSClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClientTests.debug.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClientTests/Pods-TumolinkiOSClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E540CEE8083691DDF96D4158 /* Pods-TumolinkiOSClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClient.release.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClient/Pods-TumolinkiOSClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C9C0F95487622AA5F75694 /* Pods_TumolinkiOSClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDFB7913E9E3293D6A84D29 /* Pods_TumolinkiOSClientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3B29B0A575DBFB9F8A54702 /* Pods_TumolinkiOSClientUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D3D0D76FB4B79B37F0039D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				322F196F24F4D0F8BDC3CB96 /* Pods-TumolinkiOSClient.debug.xcconfig */,
+				E540CEE8083691DDF96D4158 /* Pods-TumolinkiOSClient.release.xcconfig */,
+				DCF37BA3E5E70FC65167AE2F /* Pods-TumolinkiOSClientTests.debug.xcconfig */,
+				42C7AFBFA221FF8D49DD3850 /* Pods-TumolinkiOSClientTests.release.xcconfig */,
+				0F2E4F08E45D45D90F9383B1 /* Pods-TumolinkiOSClientUITests.debug.xcconfig */,
+				7B1F545AA98CE62BB19DF368 /* Pods-TumolinkiOSClientUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4E4FCCF704C27210ABFF6CF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19C6326C8FA39CE73114C2A1 /* Pods_TumolinkiOSClient.framework */,
+				85D0D1F9D56A9951031471F7 /* Pods_TumolinkiOSClientTests.framework */,
+				D05C88A696AFFA0E5A378D0F /* Pods_TumolinkiOSClientUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1923D1B221E440A00D214C6 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +132,8 @@
 				D1923D3B221E440D00D214C6 /* TumolinkiOSClientTests */,
 				D1923D46221E440D00D214C6 /* TumolinkiOSClientUITests */,
 				D1923D25221E440A00D214C6 /* Products */,
+				1D3D0D76FB4B79B37F0039D0 /* Pods */,
+				4E4FCCF704C27210ABFF6CF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1923D4C221E440D00D214C6 /* Build configuration list for PBXNativeTarget "TumolinkiOSClient" */;
 			buildPhases = (
+				6D7D15EB5BBCB1C5402F204D /* [CP] Check Pods Manifest.lock */,
 				D1923D20221E440A00D214C6 /* Sources */,
 				D1923D21221E440A00D214C6 /* Frameworks */,
 				D1923D22221E440A00D214C6 /* Resources */,
+				82019027AAE9EF99B698F471 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1923D4F221E440D00D214C6 /* Build configuration list for PBXNativeTarget "TumolinkiOSClientTests" */;
 			buildPhases = (
+				33A75217363E016AA73ECF1B /* [CP] Check Pods Manifest.lock */,
 				D1923D34221E440D00D214C6 /* Sources */,
 				D1923D35221E440D00D214C6 /* Frameworks */,
 				D1923D36221E440D00D214C6 /* Resources */,
@@ -185,6 +229,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1923D52221E440D00D214C6 /* Build configuration list for PBXNativeTarget "TumolinkiOSClientUITests" */;
 			buildPhases = (
+				F456DFE6E247E718B8DAFB9E /* [CP] Check Pods Manifest.lock */,
 				D1923D3F221E440D00D214C6 /* Sources */,
 				D1923D40221E440D00D214C6 /* Frameworks */,
 				D1923D41221E440D00D214C6 /* Resources */,
@@ -268,6 +313,101 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33A75217363E016AA73ECF1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TumolinkiOSClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D7D15EB5BBCB1C5402F204D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TumolinkiOSClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82019027AAE9EF99B698F471 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TumolinkiOSClient/Pods-TumolinkiOSClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TumolinkiOSClient/Pods-TumolinkiOSClient-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F456DFE6E247E718B8DAFB9E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TumolinkiOSClientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1923D20221E440A00D214C6 /* Sources */ = {
@@ -452,6 +592,7 @@
 		};
 		D1923D4D221E440D00D214C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322F196F24F4D0F8BDC3CB96 /* Pods-TumolinkiOSClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +611,7 @@
 		};
 		D1923D4E221E440D00D214C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E540CEE8083691DDF96D4158 /* Pods-TumolinkiOSClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -488,6 +630,7 @@
 		};
 		D1923D50221E440D00D214C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF37BA3E5E70FC65167AE2F /* Pods-TumolinkiOSClientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +652,7 @@
 		};
 		D1923D51221E440D00D214C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42C7AFBFA221FF8D49DD3850 /* Pods-TumolinkiOSClientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +674,7 @@
 		};
 		D1923D53221E440D00D214C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F2E4F08E45D45D90F9383B1 /* Pods-TumolinkiOSClientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -550,6 +695,7 @@
 		};
 		D1923D54221E440D00D214C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B1F545AA98CE62BB19DF368 /* Pods-TumolinkiOSClientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
