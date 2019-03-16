@@ -24,6 +24,9 @@ class SpaceTableViewController: UITableViewController {
     // APIのパス
     var apiPath: String = "/api/iosclient"
     
+    // ログインユーザーのid
+    var userid: Int?
+    
     // FacebookLogin
     // ユーザー情報を表示する
     func returnUserDate() {
@@ -42,6 +45,11 @@ class SpaceTableViewController: UITableViewController {
                 
                 // ログインユーザーの情報をデバッグ表示
                 print(result)
+                
+                // idが取得できたら変数に格納
+                if let userid = result["id"] as? Int {
+                    self.userid = userid
+                }
             }
         })
         connection.start()
