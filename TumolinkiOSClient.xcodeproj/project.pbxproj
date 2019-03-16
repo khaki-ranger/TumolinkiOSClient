@@ -19,6 +19,7 @@
 		D1923D3D221E440D00D214C6 /* TumolinkiOSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D3C221E440D00D214C6 /* TumolinkiOSClientTests.swift */; };
 		D1923D48221E440D00D214C6 /* TumolinkiOSClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */; };
 		D1C19BDE2227EAC800F7F318 /* AvailabilityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */; };
+		D1D07DF3223CB352003264CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D07DF2223CB352003264CA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumolinkiOSClientUITests.swift; sourceTree = "<group>"; };
 		D1923D49221E440D00D214C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityData.swift; sourceTree = "<group>"; };
+		D1D07DF2223CB352003264CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D1923D27221E440A00D214C6 /* AppDelegate.swift */,
+				D1D07DF2223CB352003264CA /* LoginViewController.swift */,
 				D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */,
 				D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */,
 				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
@@ -275,6 +278,7 @@
 				D1634707222966820021B4FE /* AvailabilityTableViewCell.swift in Sources */,
 				D14302E22227AC5E002346DB /* SpaceViewController.swift in Sources */,
 				D1653B71222369C7007BB9CD /* SpaceTableViewController.swift in Sources */,
+				D1D07DF3223CB352003264CA /* LoginViewController.swift in Sources */,
 				D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */,
 				D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */,
 				D1923D28221E440A00D214C6 /* AppDelegate.swift in Sources */,
