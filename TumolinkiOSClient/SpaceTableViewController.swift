@@ -23,9 +23,6 @@ class SpaceTableViewController: UITableViewController {
     
     // APIのパス
     var apiPath: String = "/api/iosclient"
-    
-    // ログインユーザーのidを格納する
-    var userid: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,33 +34,15 @@ class SpaceTableViewController: UITableViewController {
         titleView.image = UIImage(named: "logo")
         self.navigationItem.titleView = titleView
         
-        // ログインユーザーの情報を取得
-        returnUserDate()
-        
         // 保持しているデータをいったん削除
         spaceDataArray.removeAll()
         
         // リクエストURLを作成する
         let requestUrl = baseUrl + apiPath
         
-        // Facebook認証が通った場合
-        // APIにリクエストする
-        if let userid = self.userid {
-            URLSessionPostClient(requestUrl: requestUrl, parameters: ["userid": userid])
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    // FacebookLogin
-    // ユーザー情報を表示する
-    func returnUserDate() {
         let graphPath = "me"
         let parameters = ["fields": "id, name, email"]
         let graphRequest = FBSDKGraphRequest(graphPath: graphPath, parameters: parameters)
-        
         let connection = FBSDKGraphRequestConnection()
         connection.add(graphRequest, completionHandler: { (connection, result, error) in
             if let error = error {
@@ -73,16 +52,20 @@ class SpaceTableViewController: UITableViewController {
                     return
                 }
                 
-                // ログインユーザーの情報をデバッグ表示
+                // デバッグ
                 print(result)
                 
-                // idが取得できたら変数に格納
-                if let userid = result["id"] as? Int {
-                    self.userid = userid
+                // useridが取得できたらリクエストを送る
+                if let userid = result["id"] as? String {
+                    self.URLSessionPostClient(requestUrl: requestUrl, parameters: ["userid": userid])
                 }
             }
         })
         connection.start()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     // レスポンス内容をパースしてリストを作成する
@@ -180,7 +163,7 @@ class SpaceTableViewController: UITableViewController {
         request.httpMethod = "POST"
         
         // パラメータの文字列を生成
-        let parameterString: String = parameters.enumerated().reduce("?") { (input, tuple) -> String in
+        let parameterString: String = parameters.enumerated().reduce("") { (input, tuple) -> String in
             switch tuple.element.value {
             case let int as Int: return input + tuple.element.key + "=" + String(int) + (parameters.count - 1 > tuple.offset ? "&" : "")
             case let string as String: return input + tuple.element.key + "=" + string + (parameters.count - 1 > tuple.offset ? "&" : "")
