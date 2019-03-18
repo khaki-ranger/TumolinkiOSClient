@@ -46,8 +46,11 @@ class SpaceTableViewController: UITableViewController {
         // リクエストURLを作成する
         let requestUrl = baseUrl + apiPath
         
-        // APIをリクエストする
-        request(requestUrl: requestUrl)
+        // Facebook認証が通った場合
+        // APIにリクエストする
+        if let userid = self.userid {
+            URLSessionPostClient(requestUrl: requestUrl, parameters: ["userid": userid])
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -165,7 +168,7 @@ class SpaceTableViewController: UITableViewController {
     }
     
     // リクエストを行う
-    func request(requestUrl: String) {
+    func URLSessionPostClient(requestUrl: String, parameters: [String: Any]) {
         // URL生成
         guard let url = URL(string: requestUrl) else {
             // URL生成失敗
@@ -173,7 +176,20 @@ class SpaceTableViewController: UITableViewController {
         }
         
         // リクエスト生成
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        // パラメータの文字列を生成
+        let parameterString: String = parameters.enumerated().reduce("?") { (input, tuple) -> String in
+            switch tuple.element.value {
+            case let int as Int: return input + tuple.element.key + "=" + String(int) + (parameters.count - 1 > tuple.offset ? "&" : "")
+            case let string as String: return input + tuple.element.key + "=" + string + (parameters.count - 1 > tuple.offset ? "&" : "")
+            default: return input
+            }
+        }
+        
+        // リクエストにパラメーターを含める
+        request.httpBody = parameterString.data(using: String.Encoding.utf8)
         
         // APIにリクエストを送る
         let session = URLSession.shared
