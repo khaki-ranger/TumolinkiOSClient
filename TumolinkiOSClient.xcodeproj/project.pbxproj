@@ -21,6 +21,7 @@
 		D1923D3D221E440D00D214C6 /* TumolinkiOSClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D3C221E440D00D214C6 /* TumolinkiOSClientTests.swift */; };
 		D1923D48221E440D00D214C6 /* TumolinkiOSClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */; };
 		D198C7D82263033F006CC9AE /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198C7D72263033F006CC9AE /* InputViewController.swift */; };
+		D198C7DA22631647006CC9AE /* LoginUserDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D198C7D922631647006CC9AE /* LoginUserDate.swift */; };
 		D1C19BDE2227EAC800F7F318 /* AvailabilityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */; };
 		D1D07DF3223CB352003264CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D07DF2223CB352003264CA /* LoginViewController.swift */; };
 		D3B29B0A575DBFB9F8A54702 /* Pods_TumolinkiOSClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05C88A696AFFA0E5A378D0F /* Pods_TumolinkiOSClientUITests.framework */; };
@@ -69,6 +70,7 @@
 		D1923D47221E440D00D214C6 /* TumolinkiOSClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumolinkiOSClientUITests.swift; sourceTree = "<group>"; };
 		D1923D49221E440D00D214C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D198C7D72263033F006CC9AE /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		D198C7D922631647006CC9AE /* LoginUserDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserDate.swift; sourceTree = "<group>"; };
 		D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityData.swift; sourceTree = "<group>"; };
 		D1D07DF2223CB352003264CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DCF37BA3E5E70FC65167AE2F /* Pods-TumolinkiOSClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TumolinkiOSClientTests.debug.xcconfig"; path = "Target Support Files/Pods-TumolinkiOSClientTests/Pods-TumolinkiOSClientTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,13 +155,14 @@
 			children = (
 				D1923D27221E440A00D214C6 /* AppDelegate.swift */,
 				D1D07DF2223CB352003264CA /* LoginViewController.swift */,
-				D198C7D72263033F006CC9AE /* InputViewController.swift */,
 				D1653B70222369C7007BB9CD /* SpaceTableViewController.swift */,
 				D1653B6E222367A6007BB9CD /* SpaceTableViewCell.swift */,
 				D1653B6C222365B3007BB9CD /* SpaceData.swift */,
 				D14302E12227AC5E002346DB /* SpaceViewController.swift */,
 				D1634706222966820021B4FE /* AvailabilityTableViewCell.swift */,
 				D1C19BDD2227EAC800F7F318 /* AvailabilityData.swift */,
+				D198C7D72263033F006CC9AE /* InputViewController.swift */,
+				D198C7D922631647006CC9AE /* LoginUserDate.swift */,
 				D1923D2B221E440A00D214C6 /* Main.storyboard */,
 				D1923D2E221E440C00D214C6 /* Assets.xcassets */,
 				D1923D30221E440C00D214C6 /* LaunchScreen.storyboard */,
@@ -408,6 +411,7 @@
 				D1D07DF3223CB352003264CA /* LoginViewController.swift in Sources */,
 				D1653B6D222365B3007BB9CD /* SpaceData.swift in Sources */,
 				D1653B6F222367A6007BB9CD /* SpaceTableViewCell.swift in Sources */,
+				D198C7DA22631647006CC9AE /* LoginUserDate.swift in Sources */,
 				D1923D28221E440A00D214C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

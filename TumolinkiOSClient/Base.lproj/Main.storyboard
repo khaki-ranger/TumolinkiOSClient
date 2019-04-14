@@ -204,15 +204,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKp-TS-Wlk">
+                                <rect key="frame" x="100" y="398.5" width="175" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="submit:" destination="xiv-hl-lFC" eventType="touchUpInside" id="6HQ-5R-sTa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="centerY" secondItem="ipk-L5-Kri" secondAttribute="centerY" id="2Lj-or-l2F"/>
+                            <constraint firstItem="rKp-TS-Wlk" firstAttribute="top" secondItem="4DR-RH-dwk" secondAttribute="bottom" constant="50" id="7Y1-eR-RnO"/>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="centerX" secondItem="ipk-L5-Kri" secondAttribute="centerX" id="FvY-Ic-d0A"/>
+                            <constraint firstItem="rKp-TS-Wlk" firstAttribute="leading" secondItem="eni-sd-1nA" secondAttribute="leading" constant="100" id="GlR-lg-r00"/>
                             <constraint firstItem="eni-sd-1nA" firstAttribute="trailing" secondItem="Ofe-ab-wWp" secondAttribute="trailing" constant="100" id="IF0-p3-y9N"/>
                             <constraint firstItem="Ofe-ab-wWp" firstAttribute="leading" secondItem="eni-sd-1nA" secondAttribute="leading" constant="100" id="RgX-q9-ZFc"/>
                             <constraint firstItem="eni-sd-1nA" firstAttribute="trailing" secondItem="4DR-RH-dwk" secondAttribute="trailing" constant="100" id="agw-k4-cbm"/>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="top" secondItem="Ofe-ab-wWp" secondAttribute="bottom" constant="50" id="g84-Sd-h2Q"/>
+                            <constraint firstItem="rKp-TS-Wlk" firstAttribute="centerX" secondItem="ipk-L5-Kri" secondAttribute="centerX" id="pvI-Jl-G18"/>
+                            <constraint firstItem="eni-sd-1nA" firstAttribute="trailing" secondItem="rKp-TS-Wlk" secondAttribute="trailing" constant="100" id="r8e-cW-mff"/>
                             <constraint firstItem="Ofe-ab-wWp" firstAttribute="centerX" secondItem="ipk-L5-Kri" secondAttribute="centerX" id="uRD-27-T6U"/>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="leading" secondItem="eni-sd-1nA" secondAttribute="leading" constant="100" id="yLR-yV-xXs"/>
                         </constraints>

@@ -37,6 +37,8 @@ class InputViewController: UIViewController {
         tumoli = Int(sender.value)
     }
     
+    @IBAction func submit(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
