@@ -183,29 +183,48 @@
             </objects>
             <point key="canvasLocation" x="2738" y="114"/>
         </scene>
-        <!--View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="7a8-Yv-79b">
             <objects>
-                <viewController id="xiv-hl-lFC" sceneMemberID="viewController">
+                <viewController id="xiv-hl-lFC" customClass="InputViewController" customModule="TumolinkiOSClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ipk-L5-Kri">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4DR-RH-dwk">
                                 <rect key="frame" x="98" y="318.5" width="179" height="31"/>
+                                <connections>
+                                    <action selector="changeSlider:" destination="3xX-ST-sel" eventType="valueChanged" id="LJ3-6Z-pJG"/>
+                                    <action selector="changeSlider:" destination="xiv-hl-lFC" eventType="valueChanged" id="RdZ-r4-iYd"/>
+                                </connections>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofe-ab-wWp">
+                                <rect key="frame" x="100" y="248.5" width="175" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="centerY" secondItem="ipk-L5-Kri" secondAttribute="centerY" id="2Lj-or-l2F"/>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="centerX" secondItem="ipk-L5-Kri" secondAttribute="centerX" id="FvY-Ic-d0A"/>
+                            <constraint firstItem="eni-sd-1nA" firstAttribute="trailing" secondItem="Ofe-ab-wWp" secondAttribute="trailing" constant="100" id="IF0-p3-y9N"/>
+                            <constraint firstItem="Ofe-ab-wWp" firstAttribute="leading" secondItem="eni-sd-1nA" secondAttribute="leading" constant="100" id="RgX-q9-ZFc"/>
                             <constraint firstItem="eni-sd-1nA" firstAttribute="trailing" secondItem="4DR-RH-dwk" secondAttribute="trailing" constant="100" id="agw-k4-cbm"/>
+                            <constraint firstItem="4DR-RH-dwk" firstAttribute="top" secondItem="Ofe-ab-wWp" secondAttribute="bottom" constant="50" id="g84-Sd-h2Q"/>
+                            <constraint firstItem="Ofe-ab-wWp" firstAttribute="centerX" secondItem="ipk-L5-Kri" secondAttribute="centerX" id="uRD-27-T6U"/>
                             <constraint firstItem="4DR-RH-dwk" firstAttribute="leading" secondItem="eni-sd-1nA" secondAttribute="leading" constant="100" id="yLR-yV-xXs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eni-sd-1nA"/>
                     </view>
+                    <connections>
+                        <outlet property="tumoliLabel" destination="Ofe-ab-wWp" id="TbR-wd-Q88"/>
+                        <outlet property="tumoliSlider" destination="4DR-RH-dwk" id="1RN-gC-jLW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIr-uI-8RX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3xX-ST-sel" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3565.5999999999999" y="113.79310344827587"/>
         </scene>
